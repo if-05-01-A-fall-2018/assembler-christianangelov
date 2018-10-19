@@ -1,0 +1,47 @@
+"How much points can you check? How much points saved you?"
+
+inc 8
+
+#print how much points can you check?
+lit 0
+lit 30
+lit 32
+out 2
+
+#scan how much point can you save
+
+
+la 0 30  #address where 8 bytes were reserved
+la 0 36
+in 0
+
+
+
+#print how much points saved you
+lit 31
+lit 30
+lit 32
+out 2
+
+#scan how much point do you really saved
+
+la 0 34
+la 0 40
+in 0
+
+
+la 0 50
+
+
+#calculate
+lv 0 34
+lit 100
+mul
+lv 0 30
+div
+sto
+lv 0 50
+lit 1
+
+out 0
+halt

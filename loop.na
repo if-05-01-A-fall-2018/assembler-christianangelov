@@ -1,0 +1,71 @@
+"Please enter a number: "
+
+inc 16 #lieber zu viel als zuwenig
+
+#du mogst 30 zeichen von am 25 langen string ausgebn
+lit 0
+lit 25
+lit 30 #und fuerd ausgabe hot 14 zeichen platz
+out 2
+
+#scan your input
+
+la 0 32
+la 0 36
+in 0
+sto
+
+la 0 36 #jz hom ma moi auf dem 36 0 gespeichert
+lit 0 #ladet 0
+sto
+jmp .loop
+
+#ups ds woit i nd i woit oben in de optionen und so
+
+
+
+.loop
+#laden der adresse:
+la 0 36
+#laden des aktuellen wert:
+lv 0 36
+#laden von dem was geaddet wird:
+lit 1
+#adden:
+add
+#speichern:
+sto
+
+#do muast de zahl nu ausgebn
+
+#laden ds wertes bei dem ma grod san:
+lv 0 36
+lit 1
+out 0 #0 fuer a zahl
+out 3 #3 fuer new line
+
+
+#speichere moi ds kann i nd :(
+lv 0 36
+lv 0 32
+rel 2
+tjmp .end
+jmp .loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.end
+halt

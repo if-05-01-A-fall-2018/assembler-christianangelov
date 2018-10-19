@@ -1,0 +1,67 @@
+"Please enter a number: "
+inc 24
+#32 input
+#36 aktuelle primeFactor
+
+lit 0
+lit 25
+lit 30
+out 2
+
+#scan
+la 0 32
+la 0 36
+in 0
+sto
+
+la 0 36
+lit 2
+sto
+
+.loop
+
+
+
+lv 0 32
+lv 0 36
+mod
+lit 0
+rel 2
+tjmp .True
+jmp .False
+
+
+.end
+halt
+
+
+.False
+lv 0 32
+lit 1
+rel 2
+tjmp .end
+
+la 0 36
+lv 0 36
+lit 1
+add
+sto
+
+jmp .loop
+
+.True
+
+lv 0 36
+lit 1
+out 0
+out 3
+
+
+la 0 32
+lv 0 32
+lv 0 36
+div
+sto
+
+
+jmp .loop
